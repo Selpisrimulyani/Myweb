@@ -12,16 +12,14 @@
     {% include "layout/menu.html"%}
 
     <ul>
-        {% for blog in blogs %}
-        <li>{{ blog.judul }} - {{ blog.tanggal }} - {{ blog.penulis }}</li>
+        {% for blog in Blogs %}
+        <h2>{{ blog.judul }}</h2>
+        <h4>{{ blog.kategori }} - {{ blog.kategori.keterangan }}</h4>
+        <li>{{ blog.judul }} - {{ blog.tanggal }} - oleh <i>{{ blog.penulis }}</i></li>
+        <hr>
         {% endfor %}
     </ul>
-    <article>
-        {% for blog in blogs %}
-        {{ blog.konten }}
-        {% endfor %}
-        <hr>
-    </article>
+   
     
 
 </body>

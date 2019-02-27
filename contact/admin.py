@@ -2,8 +2,7 @@
 from __future__ import unicode_literals
 
 from django.contrib import admin
+from contact.models import contact
 
-from Blog.models import Artikel, Kategori
 # Register your models here.
-admin.site.register(Artikel)
-admin.site.register(Kategori)
+admin.site.register(contact)
